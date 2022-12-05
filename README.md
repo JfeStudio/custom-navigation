@@ -1,5 +1,5 @@
 # Custom Navigation
-Custom navigation with Tailwind
+Custom Navigation with Tailwind
 
 ## Preview Desktop
 ![Slicing Design with Tailwindcss](/public/preview/hero-navigation.png)
