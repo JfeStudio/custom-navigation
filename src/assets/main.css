@@ -1,0 +1,48 @@
+/* setting css variable in file base.css */
+@import "./base.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* format navbar */
+.navbar {
+  @apply relative flex justify-between md:items-center;
+}
+
+.nav-link {
+  @apply text-[.8rem] font-semibold uppercase md:text-xs;
+}
+
+/* navscrolling */
+.header-fixed {
+  @apply bg-transparent;
+  backdrop-filter: blur(0.3rem);
+  -webkit-backdrop-filter: blur(0.3rem);
+  box-shadow: 0 1px 8px rgba(0 0 0 / 0.05);
+  border-bottom: 0.03rem solid rgba(0, 0, 0, 0.03);
+}
+/* custom scrolbar */
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0 0 0 / 0.15);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(125deg, #111, #333);
+  border-radius: 10px;
+}
+.mobile-nav-enter-active,
+.mobile-nav-leave-active {
+  /* @apply; */
+  transition: all 0.2s ease-in-out;
+}
+.mobile-nav-leave-to {
+  @apply opacity-0;
+  transform: translateY(-20px);
+}
+/* .mobile-nav-enter-to {
+  @apply translate-y-0;
+  /* transform: translateY(4px);
+} */
