@@ -5,19 +5,17 @@
   >
     <div class="container mx-auto">
       <div class="navbar">
-        <Routerlink :to="{ name: '/' }" class="logo cursor-pointer">
+        <RouterLink to="/" class="logo cursor-pointer">
           <i class="bx bx-cube-alt icon text-3xl"></i>
-        </Routerlink>
+        </RouterLink>
         <nav v-show="!mobile">
           <ul class="menu flex items-center gap-x-8">
-            <RonterLink to="/about" class="cursor-pointer">
-              <!-- <a class="nav-link" href="./public/challenges.html">Challenges</a> -->
+            <RouterLink to="/about" class="relative max-w-max cursor-pointer">
               About
-            </RonterLink>
-            <RonterLink class="cursor-pointer" :to="{ name: 'Profile' }">
-              <!-- <a class="nav-link" href="./public/challenges.html">Challenges</a> -->
+            </RouterLink>
+            <RouterLink to="/profile" class="relative max-w-max cursor-pointer">
               Profile
-            </RonterLink>
+            </RouterLink>
             <RouterLink
               to="/services"
               class="relative max-w-max cursor-pointer"
@@ -29,10 +27,12 @@
               </div>
               Services
             </RouterLink>
-            <RonterLink class="cursor-pointer" :to="{ name: 'Portfolio' }">
-              <!-- <a class="nav-link" href="./public/challenges.html">Challenges</a> -->
+            <RouterLink
+              :to="{ name: 'Portfolio' }"
+              class="relative max-w-max cursor-pointer"
+            >
               Portfolio
-            </RonterLink>
+            </RouterLink>
             <a
               href="https://github.com/JfeStudio"
               class="bg-hover rounded-full flex justify-center items-center bg-dark-scy w-7 h-7 font-medium text-white"
@@ -59,14 +59,14 @@
             <ul
               class="menu flex flex-col gap-y-3 md:flex-row md:items-center md:gap-x-8"
             >
-              <RonterLink class="cursor-pointer" to="/">
+              <RouterLink class="cursor-pointer" to="/about">
                 <!-- <a class="nav-link" href="./public/challenges.html">Challenges</a> -->
                 About
-              </RonterLink>
-              <RonterLink class="cursor-pointer" to="/">
+              </RouterLink>
+              <RouterLink class="cursor-pointer" to="/profile">
                 <!-- <a class="nav-link" href="./public/challenges.html">Challenges</a> -->
                 Profile
-              </RonterLink>
+              </RouterLink>
               <RouterLink
                 to="/services"
                 class="relative max-w-max cursor-pointer"
@@ -78,10 +78,10 @@
                 </div>
                 Services
               </RouterLink>
-              <RonterLink class="cursor-pointer" to="/">
+              <RouterLink class="cursor-pointer" to="/portfolio">
                 <!-- <a class="nav-link" href="./public/challenges.html">Challenges</a> -->
                 Portfolio
-              </RonterLink>
+              </RouterLink>
               <a
                 href="https://github.com/JfeStudio"
                 class="bg-hover rounded-full flex justify-center items-center bg-dark-scy w-7 h-7 font-medium text-white"
@@ -96,7 +96,7 @@
   </header>
 </template>
 <script>
-// import { RouterLink } from "vue-router";
+import { RouterLink } from "vue-router";
 export default {
   name: "navigation",
 
