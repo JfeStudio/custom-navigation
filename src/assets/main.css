@@ -10,10 +10,6 @@
   @apply relative flex justify-between md:items-center;
 }
 
-.nav-link {
-  @apply text-[.8rem] font-semibold uppercase md:text-xs;
-}
-
 /* navscrolling */
 .header-fixed {
   @apply bg-transparent;
@@ -33,16 +29,6 @@
   background: linear-gradient(125deg, #111, #333);
   border-radius: 10px;
 }
-.mobile-nav-enter-active,
-.mobile-nav-leave-active {
-  /* @apply; */
-  transition: all 0.2s ease-in-out;
+.navigation.active {
+  @apply translate-x-0;
 }
-.mobile-nav-leave-to {
-  @apply opacity-0;
-  transform: translateY(-20px);
-}
-/* .mobile-nav-enter-to {
-  @apply translate-y-0;
-  /* transform: translateY(4px);
-} */
